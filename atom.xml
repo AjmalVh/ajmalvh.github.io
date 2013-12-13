@@ -4,11 +4,11 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://AjmalVh.github.io/atom.xml" rel="self"/>
   <link href="http://AjmalVh.github.io/"/>
-  <updated>2013-12-13T14:43:28+05:30</updated>
+  <updated>2013-12-13T14:49:45+05:30</updated>
   <id>http://AjmalVh.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
-    
+    <email><![CDATA[ajmalcpp@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
