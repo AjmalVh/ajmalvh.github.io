@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://AjmalVh.github.io
-title: Ajmal's Blogs
-subtitle: Techie thoughts
+title: Ajmal's Blog
+subtitle:
 author: Ajmal Vh
 simple_search: http://google.com/search
-description: This is a test description.
+description: I am a web developer
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
