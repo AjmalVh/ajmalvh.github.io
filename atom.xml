@@ -4,7 +4,7 @@
   <title><![CDATA[Ajmal's Blog]]></title>
   <link href="http://AjmalVh.github.io/atom.xml" rel="self"/>
   <link href="http://AjmalVh.github.io/"/>
-  <updated>2013-12-16T16:08:30+05:30</updated>
+  <updated>2013-12-16T17:07:33+05:30</updated>
   <id>http://AjmalVh.github.io/</id>
   <author>
     <name><![CDATA[Ajmal Vh]]></name>
@@ -18,7 +18,9 @@
     <link href="http://AjmalVh.github.io/blog/2013/12/13/hello-world/"/>
     <updated>2013-12-13T12:14:02+05:30</updated>
     <id>http://AjmalVh.github.io/blog/2013/12/13/hello-world</id>
-    <content type="html"><![CDATA[<p>This website is under construction ;)</p>
+    <content type="html"><![CDATA[<p><img src="http://restorationpm.com/images/website-under-construction2.gif"></p>
+
+<p>This website is under construction ;)</p>
 ]]></content>
   </entry>
   
