@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Ajmal V Hassainar]]></title>
-  <link href="http://ajmalvh.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: C# | Ajmal V Hassainar]]></title>
+  <link href="http://ajmalvh.com/blog/categories/c-number/atom.xml" rel="self"/>
   <link href="http://ajmalvh.com/"/>
   <updated>2013-12-28T17:10:41+05:30</updated>
   <id>http://ajmalvh.com/</id>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Javascript for C# developers Part 1]]></title>
+    <title type="html"><![CDATA[Javascript for C# Developers Part 1]]></title>
     <link href="http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/"/>
     <updated>2013-12-25T22:31:02+05:30</updated>
     <id>http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers</id>
@@ -39,59 +39,44 @@ Methods => Functions</p>
 <p>In strong typing, types are defined by names and have a static structure, we know what all properties and
 methods are inside a specific type. We cannot assign properties or methods dynamically at the runtime.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>//C#
-</span><span class='line'>var foo = 123;
-</span><span class='line'>
-</span><span class='line'>foo = new Person(); //Compiler Error
-</span><span class='line'>foo = "Hey"; //Compiler Error
-</span><span class='line'>
-</span><span class='line'>//Javascript
-</span><span class='line'>var bar = 123;
-</span><span class='line'>
-</span><span class='line'>bar = "Hey Ajmal"; //Now bar is of type string
-</span><span class='line'>bar = new Person() //Now bar holds the person object</span></code></pre></td></tr></table></div></figure>
+<p>```
+//C#
+var foo = 123;</p>
 
+<p>foo = new Person(); //Compiler Error
+foo = &ldquo;Hey&rdquo;; //Compiler Error</p>
+
+<p>//Javascript
+var bar = 123;</p>
+
+<p>bar = &ldquo;Hey Ajmal&rdquo;; //Now bar is of type string
+bar = new Person() //Now bar holds the person object
+```</p>
 
 <p>In C#, we know the type of object returned in the compile time itself, but this is not in the case of javascript, type is assigned in the runtime just like C# the &lsquo;dynamic&rsquo; keyword in C#. Do not confuse javascript var keyword with the var keyword in C#. In C# we can use var when the compiler can infer the type in the compile time itself. In the above example, we cannot re-assign the type of variable &lsquo;foo&rsquo; to onother type in C#, because we typed &lsquo;foo&rsquo; to be an integer and we have to consistently use this as an integer, we cannot change the type of a variable after its creation. In Javascript there is no such rules.</p>
 
 <h4>Dynamic Typing</h4>
 
-<p>In Javascript we can add on to and remove properties of an object any time you need. Here we have an object with two properties, we can add properties or change the type of existing ones any time.</p>
+<p>In Javascript we can add on to and remove properties of an object any time you need. Here we have an object with two properties, we can add properties or change the type of existing ones any time.
+```
+var person = {</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var person = {
-</span><span class='line'>  name: "Ajmal",
-</span><span class='line'>  age: 24
-</span><span class='line'>};
-</span><span class='line'>
-</span><span class='line'>person.country = "India";
-</span><span class='line'>person.age = "Twenty four";
-</span><span class='line'>person.sayName = function() {
-</span><span class='line'>  alert("My name is "+ this.name);
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+<pre><code>name: "Ajmal",
+age: 24
+</code></pre>
 
+<p>};</p>
 
-<p>This is a very powerful feature of javascript, but there is a chance to mess up the code if we don&rsquo;t use it properly.</p>
+<p>person.country = &ldquo;India&rdquo;;
+person.age = &ldquo;Twenty four&rdquo;;
+person.sayName = function() {</p>
+
+<pre><code>alert("My name is "+ this.name);
+</code></pre>
+
+<p>}
+```
+This is a very powerful feature of javascript, but there is a chance to mess up the code if we don&rsquo;t use it properly.</p>
 
 <h2>Primitive Types</h2>
 
