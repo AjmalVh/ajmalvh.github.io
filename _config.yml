@@ -2,12 +2,14 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://AjmalVh.github.io
+url: http://ajmalvh.com
 title: Ajmal V Hassainar
 subtitle:
 author: Ajmal Vh
 simple_search: http://google.com/search
-description: "Web Developer | Umbraco | ASP.NET | C# | Node.js | HTML5 | Trekking | Techie | Coffee Addict | Call of Duty | Software Engineer @Phasesdk"
+description: "Web Developer | ASP.NET | Umbraco | C# | Node.js | HTML5 | Trekking | Techie | Coffee Addict | Call of Duty | Software Engineer @Phasesdk"
+
+keywords: "ajmalvh, umbraco kerala, umbraco cochin, nodejs cochin, ajmal vh, umbraco Developers"
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -90,7 +92,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: "ajmalvh"
 disqus_show_comment_count: false
 
 # Google Analytics
