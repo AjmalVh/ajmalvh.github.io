@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: C# | Ajmal V Hassainar]]></title>
-  <link href="http://ajmalvh.com/blog/categories/c-number/atom.xml" rel="self"/>
-  <link href="http://ajmalvh.com/"/>
-  <updated>2013-12-28T17:10:41+05:30</updated>
-  <id>http://ajmalvh.com/</id>
+  <link href="http://ajmalvh.github.io/blog/categories/c-number/atom.xml" rel="self"/>
+  <link href="http://ajmalvh.github.io/"/>
+  <updated>2013-12-28T17:13:49+05:30</updated>
+  <id>http://ajmalvh.github.io/</id>
   <author>
     <name><![CDATA[Ajmal Vh]]></name>
     <email><![CDATA[ajmalcpp@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Javascript for C# Developers Part 1]]></title>
-    <link href="http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/"/>
+    <link href="http://ajmalvh.github.io/blog/2013/12/25/javascript-for-c-sharp-developers/"/>
     <updated>2013-12-25T22:31:02+05:30</updated>
-    <id>http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers</id>
+    <id>http://ajmalvh.github.io/blog/2013/12/25/javascript-for-c-sharp-developers</id>
     <content type="html"><![CDATA[<h2>Introduction</h2>
 
 <p>Javascript is the new emerging language, few years back we where using it only on client side, now javascript is everywhere, there are tons of client side and server side frameworks.</p>
