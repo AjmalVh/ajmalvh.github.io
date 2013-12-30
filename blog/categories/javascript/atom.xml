@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript, | Ajmal V Hassainar]]></title>
   <link href="http://ajmalvh.com/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://ajmalvh.com/"/>
-  <updated>2013-12-30T10:14:57+05:30</updated>
+  <updated>2013-12-30T10:17:43+05:30</updated>
   <id>http://ajmalvh.com/</id>
   <author>
     <name><![CDATA[Ajmal Vh]]></name>
@@ -12,111 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Javascript for C# Developers Part 2]]></title>
-    <link href="http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/"/>
-    <updated>2013-12-26T23:00:58+05:30</updated>
-    <id>http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2</id>
-    <content type="html"><![CDATA[<h2>Javascript functions</h2>
-
-<p>The concept of functions in Javascript is different from C#, functions are not just sub-routines or methods here, it is the heart and soul of javascript, it acts as sub-routines as well as objects. We can assign functions to variables, pass a function as parameter of other function etc..</p>
-
-<h4>Function parameters &amp; Return values</h4>
-
-<p>Just like C# we can define function parameters and can pass values when we call it. The difference is, it is not nessesery to pass the exact number of parameters that we defined in the function definition when we call it. We can call the function with more or less parameters that is defined. <!--more-->The parameters that are not passed in are just <em>undefined</em>. We can also access the function parameter values using the <em>arguments</em> object inside the function. Let&rsquo;s look at an example.
-```
-var displayName(name1, name2, name3){</p>
-
-<pre><code>alert(name1);
-alert(name2);
-alert(name3);
-</code></pre>
-
-<p>}</p>
-
-<p>displayName(&lsquo;John&rsquo;); //name2 and name3 will be undefined
-displayName(&lsquo;John, 'Mary&rsquo;); ////name3 will be undefined</p>
-
-<p>//Accessing parameters with arguments object
-var displayName(name1, name2){</p>
-
-<pre><code>alert(arguments.length); //Display the number of parameters passed
-alert(arguments[0]); //Display the first parameter
-</code></pre>
-
-<p>}</p>
-
-<p>```
-There is no <strong>function overloading</strong> in Javascript. There will be only one function with the specific name. If we define two functions with same name and different arguments list. the second one will overwrite the first one regardless of the number of parameters. We will using the flexibility of javascript functions to achieve what we do with function overloading in C#. As is mentioned above, we can call a javascript function with more or less parameters that is defined. So, to achive function overloading kind of effect, inside the function defenition we will check which all parameters are defined by the callie, and can prepare our logic according to that.</p>
-
-<p>Every javascript function returns a value. There is no way to specify a return type. As javascript is a dynamic language the return type will only be resolved at the runtime. If we haven&rsquo;t specified any return, the returned value will be of type <em>undefined</em>.</p>
-
-<h2>Scoping</h2>
-
-<p>In C# we use curly braces to define the scope. for example, if we define a variable inside an if statement or a for loop it is not available outside it, because it is local to where it is defined. In javascript curly braces dont limit the scope, the only thing that creates a scope in javascript is function. Here is an example.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>C# </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var x = 10;
-</span><span class='line'>if(true)
-</span><span class='line'>{&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>var y = 5 * x;
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>}
-</span><span class='line'>var result = y; // variable y is not available here</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Javascript </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var x = 10;
-</span><span class='line'>if(true){&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>var y = 5 * x;
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>}
-</span><span class='line'>var result = y; // This works!&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>//Creating scope with functions
-</span><span class='line'>var x = 10;
-</span><span class='line'>function hello(){&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>var y = 5 * x;
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>}
-</span><span class='line'>var result = y; // This won&rsquo;t work.</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<h2>Closure</h2>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Javascript for C# Developers Part 1]]></title>
