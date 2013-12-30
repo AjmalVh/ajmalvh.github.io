@@ -1,0 +1,267 @@
+
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Javascript for C# developers Part 1 - Ajmal V Hassainar</title>
+	<meta name="author" content="Ajmal Vh">
+
+	
+<meta name="description" content="Javascript for C# developers: Javascript basics in C# point of view">
+	<meta name="keywords" content="javascript for c# developer, javascript, C#, Learn javascript, javascript vs c#, javascript vs c sharp">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Ajmal V Hassainar" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>-->
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-46486161-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("ajmalcpp@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+</div>
+<hgroup>
+  <h1><a href="/">Ajmal V Hassainar</a></h1>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    Web Developer | ASP.NET | Umbraco | C# | Node.js | HTML5 | Trekking | Techie | Coffee Addict | Call of Duty | Software Engineer @Phasesdk
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href="mailto:ajmalcpp@gmail.com" title="Email">Email</a>
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/ajmalvh" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/ajmalvh" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Javascript for C# Developers Part 1</h1>
+	<div class="entry-content" itemprop="articleBody"><h2>Introduction</h2>
+
+<p>Javascript is the new emerging language, few years back we where using it only on client side, now javascript is everywhere, there are tons of client side and server side frameworks.</p>
+
+<p>I am C# developer for past few years, now i am working in with javascript also. When a developer from any curly brace language learn javascript, seeing the syntax, they just assume that the language works in the same way, but it is not. Even though the language syntax have some similarities it won&rsquo;t necessarily works in the way as you expected. Here are some tips that would help you to learn javascript from a C# developers point of view. <!--more--></p>
+
+<h2>Comparing the languages</h2>
+
+<p>Even though C# and Javascript are similar in structure, when we get down we can see a lot of differences in how they works. Here are some of the C# conventions and their javascript equivalent</p>
+
+<p>Strongly Typed => Loosely Typed <br/>
+Static => Dynamic <br/>
+Classical Inheritance => Prototypical Inheritance <br/>
+Classes => Functions <br/>
+Methods => Functions</p>
+
+<h4>Strong Typing vs Loose Typing</h4>
+
+<p>In strong typing, types are defined by names and have a static structure, we know what all properties and
+methods are inside a specific type. We cannot assign properties or methods dynamically at the runtime.</p>
+
+<figure class='code'><figcaption><span>C# </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var foo = 123;
+</span><span class='line'>
+</span><span class='line'>foo = new Person(); //Compiler Error
+</span><span class='line'>foo = "Hey"; //Compiler Error</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Javascript </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var bar = 123;
+</span><span class='line'>
+</span><span class='line'>bar = "Hey Ajmal"; //Now bar is of type string
+</span><span class='line'>bar = new Person() //Now bar holds the person object</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In C#, we know the type of object returned in the compile time itself, but this is not in the case of javascript, type is assigned in the runtime just like C# the &lsquo;dynamic&rsquo; keyword in C#. Do not confuse javascript var keyword with the var keyword in C#. In C# we can use var when the compiler can infer the type in the compile time itself. In the above example, we cannot re-assign the type of variable &lsquo;foo&rsquo; to onother type in C#, because we typed &lsquo;foo&rsquo; to be an integer and we have to consistently use this as an integer, we cannot change the type of a variable after its creation. In Javascript there is no such rules.</p>
+
+<h4>Dynamic Typing</h4>
+
+<p>In Javascript we can add on to and remove properties of an object any time you need. Here we have an object with two properties, we can add properties or change the type of existing ones any time.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var person = {
+</span><span class='line'>  name: "Ajmal",
+</span><span class='line'>  age: 24
+</span><span class='line'>};
+</span><span class='line'>
+</span><span class='line'>person.country = "India";
+</span><span class='line'>person.age = "Twenty four";
+</span><span class='line'>person.sayName = function() {
+</span><span class='line'>  alert("My name is "+ this.name);
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This is a very powerful feature of javascript, but there is a chance to mess up the code if we don&rsquo;t use it properly.</p>
+
+<h2>Primitive Types</h2>
+
+<p>These are the basic types in Javascript.</p>
+
+<ul>
+<li>boolean</li>
+<li>number</li>
+<li>string</li>
+<li>object</li>
+<li>function</li>
+<li>null</li>
+<li>undefined</li>
+</ul>
+
+
+<p>The types boolean, number, string and null has the same concept we have in C#. &lsquo;undefined&rsquo; is a special type in javascript, it implies the variable has not been defined yet. The concept of function in Javascript is different from C#, lets discuss about it in the coming chapters.</p>
+</div>
+
+</article>
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Ajmal Vh -
+    <span class="credit">Powered by <a href="http://octopress.org" target="_blank">Octopress</a></span>
+</p>
+
+<!--Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>--></footer>
+			
+
+<script type="text/javascript">
+      var disqus_shortname = 'ajmalvh';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/';
+        var disqus_url = 'http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>
