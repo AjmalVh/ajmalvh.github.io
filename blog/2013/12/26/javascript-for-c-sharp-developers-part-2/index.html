@@ -1,0 +1,268 @@
+
+﻿<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Javascript for C# developers Part 2 - Ajmal V Hassainar</title>
+	<meta name="author" content="Ajmal Vh">
+
+	
+<meta name="description" content="Javascript for C# developers: Javascript function explained">
+	<meta name="keywords" content="javascript for c# developer, swiching from C# to javascript, javascript, Learn javascript, javascript vs c#, javascript functions, javascript inheritance, javascript prototype">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Ajmal V Hassainar" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>-->
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-46486161-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	<script src="/javascripts/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5("ajmalcpp@gmail.com") + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+</div>
+<hgroup>
+  <h1><a href="/">Ajmal V Hassainar</a></h1>
+  
+</hgroup>
+
+<nav id="main-nav"><ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+<section class="aboutme">
+  <p>
+    Web Developer | ASP.NET | Umbraco | C# | Node.js | HTML5 | Trekking | Techie | Coffee Addict | Call of Duty | Software Engineer @Phasesdk
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href="mailto:ajmalcpp@gmail.com" title="Email">Email</a>
+		
+		
+		
+		
+			<a class="twitter" href="http://twitter.com/ajmalvh" title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href="https://github.com/ajmalvh" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">Javascript for C# Developers Part 2</h1>
+	<div class="entry-content" itemprop="articleBody"><h2>Javascript functions</h2>
+
+<p>The concept of functions in Javascript is different from C#, functions are not just sub-routines or methods here, it is the heart and soul of javascript, it acts as sub-routines as well as objects. We can assign functions to variables, pass a function as parameter of other function etc..</p>
+
+<h4>Function parameters &amp; Return values</h4>
+
+<p>Just like C# we can define function parameters and can pass values when we call it. The difference is, it is not nessesery to pass the exact number of parameters that we defined in the function definition when we call it. We can call the function with more or less parameters that is defined. <!--more-->The parameters that are not passed in are just <em>undefined</em>. We can also access the function parameter values using the <em>arguments</em> object inside the function. Let&rsquo;s look at an example.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var displayName(name1, name2, name3){
+</span><span class='line'>  alert(name1);
+</span><span class='line'>  alert(name2);
+</span><span class='line'>  alert(name3);
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>displayName('John'); //name2 and name3 will be undefined
+</span><span class='line'>displayName('John, 'Mary'); ////name3 will be undefined
+</span><span class='line'>
+</span><span class='line'>//Accessing parameters with arguments object
+</span><span class='line'>var displayName(name1, name2){
+</span><span class='line'>  alert(arguments.length); //Display the number of parameters passed
+</span><span class='line'>    alert(arguments[0]); //Display the first parameter
+</span><span class='line'>}
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There is no <strong>function overloading</strong> in Javascript. There will be only one function with the specific name. If we define two functions with same name and different arguments list. the second one will overwrite the first one regardless of the number of parameters. We will using the flexibility of javascript functions to achieve what we do with function overloading in C#. As is mentioned above, we can call a javascript function with more or less parameters that is defined. So, to achive function overloading kind of effect, inside the function defenition we will check which all parameters are defined by the callie, and can prepare our logic according to that.</p>
+
+<p>Every javascript function returns a value. There is no way to specify a return type. As javascript is a dynamic language the return type will only be resolved at the runtime. If we haven&rsquo;t specified any return, the returned value will be of type <em>undefined</em>.</p>
+
+<h2>Scoping</h2>
+
+<p>In C# we use curly braces to define the scope. for example, if we define a variable inside an if statement or a for loop it is not available outside it, because it is local to where it is defined. In javascript curly braces dont limit the scope, the only thing that creates a scope in javascript is function. Here is an example.</p>
+
+<figure class='code'><figcaption><span>C# </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var x = 10;
+</span><span class='line'>if(true)
+</span><span class='line'>{
+</span><span class='line'>  var y = 5 * x;
+</span><span class='line'>}
+</span><span class='line'>var result = y; // variable y is not available here</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span>Javascript </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var x = 10;
+</span><span class='line'>if(true){
+</span><span class='line'>  var y = 5 * x;
+</span><span class='line'>}
+</span><span class='line'>var result = y; // This works!
+</span><span class='line'>
+</span><span class='line'>//Creating scope with functions
+</span><span class='line'>var x = 10;
+</span><span class='line'>function hello(){
+</span><span class='line'>  var y = 5 * x;
+</span><span class='line'>}
+</span><span class='line'>var result = y; // This won't work.</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Closure</h2>
+</div>
+
+</article>
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Ajmal Vh -
+    <span class="credit">Powered by <a href="http://octopress.org" target="_blank">Octopress</a></span>
+</p>
+
+<!--Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>--></footer>
+			
+
+<script type="text/javascript">
+      var disqus_shortname = 'ajmalvh';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/';
+        var disqus_url = 'http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+		</div>
+	</div>
+</body>
+</html>
