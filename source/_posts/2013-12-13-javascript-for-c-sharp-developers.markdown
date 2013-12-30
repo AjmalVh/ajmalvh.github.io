@@ -28,19 +28,20 @@ Methods => Functions
 In strong typing, types are defined by names and have a static structure, we know what all properties and 
 methods are inside a specific type. We cannot assign properties or methods dynamically at the runtime.
    
-```
-//C#
+{% codeblock C# %}
 var foo = 123;
 
 foo = new Person(); //Compiler Error
 foo = "Hey"; //Compiler Error
 
-//Javascript
+{% endcodeblock %}
+
+{% codeblock Javascript %}
 var bar = 123;
 
 bar = "Hey Ajmal"; //Now bar is of type string
 bar = new Person() //Now bar holds the person object
-```
+{% endcodeblock %}
 
 In C#, we know the type of object returned in the compile time itself, but this is not in the case of javascript, type is assigned in the runtime just like C# the 'dynamic' keyword in C#. Do not confuse javascript var keyword with the var keyword in C#. In C# we can use var when the compiler can infer the type in the compile time itself. In the above example, we cannot re-assign the type of variable 'foo' to onother type in C#, because we typed 'foo' to be an integer and we have to consistently use this as an integer, we cannot change the type of a variable after its creation. In Javascript there is no such rules.   
    
