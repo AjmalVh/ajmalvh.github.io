@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Ajmal V Hassainar]]></title>
-  <link href="http://ajmalvh.com/atom.xml" rel="self"/>
-  <link href="http://ajmalvh.com/"/>
-  <updated>2014-01-07T13:51:45+05:30</updated>
-  <id>http://ajmalvh.com/</id>
+  <link href="http://blog.ajmalvh.com/atom.xml" rel="self"/>
+  <link href="http://blog.ajmalvh.com/"/>
+  <updated>2014-01-07T16:51:45+05:30</updated>
+  <id>http://blog.ajmalvh.com/</id>
   <author>
     <name><![CDATA[Ajmal Vh]]></name>
     <email><![CDATA[ajmalcpp@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Javascript for C# developers Part 2]]></title>
-    <link href="http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/"/>
+    <link href="http://blog.ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/"/>
     <updated>2013-12-26T23:00:58+05:30</updated>
-    <id>http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2</id>
+    <id>http://blog.ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2</id>
     <content type="html"><![CDATA[<h2>Javascript functions</h2>
 
 <p>The concept of functions in Javascript is different from C#, functions are not just sub-routines or methods here, it is the heart and soul of javascript, it acts as sub-routines as well as objects. We can assign functions to variables, pass a function as parameter of another function etc..</p>
@@ -136,9 +136,9 @@
   
   <entry>
     <title type="html"><![CDATA[Javascript for C# developers Part 1]]></title>
-    <link href="http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/"/>
+    <link href="http://blog.ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/"/>
     <updated>2013-12-25T22:31:02+05:30</updated>
-    <id>http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers</id>
+    <id>http://blog.ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers</id>
     <content type="html"><![CDATA[<h2>Introduction</h2>
 
 <p>Javascript is the new emerging language, few years back we where using it only on client side, now javascript is everywhere, there are tons of client side and server side frameworks.</p>

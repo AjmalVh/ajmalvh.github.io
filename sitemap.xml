@@ -1,27 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/</loc>
+        <loc>http://blog.ajmalvh.com/blog/2013/12/25/javascript-for-c-sharp-developers/</loc>
         <lastmod>2013-12-31T13:49:24+05:30</lastmod>
     </url>
     <url>
-        <loc>http://ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/</loc>
+        <loc>
+            http://blog.ajmalvh.com/blog/2013/12/26/javascript-for-c-sharp-developers-part-2/
+        </loc>
         <lastmod>2013-12-31T13:49:31+05:30</lastmod>
     </url>
     <url>
-        <loc>http://ajmalvh.com/blog/archives/</loc>
+        <loc>http://blog.ajmalvh.com/blog/archives/</loc>
         <lastmod>2013-12-31T13:49:31+05:30</lastmod>
     </url>
     <url>
-        <loc>http://ajmalvh.com/blog/categories/</loc>
+        <loc>http://blog.ajmalvh.com/blog/categories/</loc>
         <lastmod>2013-12-13T14:30:06+05:30</lastmod>
     </url>
     <url>
-        <loc>http://ajmalvh.com/</loc>
+        <loc>http://blog.ajmalvh.com/</loc>
         <lastmod>2013-12-31T13:49:31+05:30</lastmod>
     </url>
     <url>
-        <loc>http://ajmalvh.com/robots.txt</loc>
+        <loc>http://blog.ajmalvh.com/robots.txt</loc>
         <lastmod>2013-12-25T18:11:04+05:30</lastmod>
     </url>
 </urlset>
