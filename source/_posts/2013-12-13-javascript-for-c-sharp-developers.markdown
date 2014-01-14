@@ -2,7 +2,7 @@
 layout: post
 title: "Javascript for C# developers Part 1"
 date: 2013-12-25 22:31:02 +0530
-comments: false
+comments: true
 sharing: false
 categories: "javascript, C#"
 keywords: "javascript for c# developer, javascript, C#, Learn javascript, javascript vs c#, javascript vs c sharp"

@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://ajmalvh.com
+url: http://blog.ajmalvh.com
 title: Ajmal V Hassainar
 subtitle:
 author: Ajmal Vh
@@ -96,7 +96,7 @@ disqus_short_name: "ajmalvh"
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id: UA-46486161-1
+google_analytics_tracking_id: UA-46486161-2
 
 # Facebook Like
 facebook_like: false

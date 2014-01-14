@@ -2,7 +2,7 @@
 layout: post
 title: "Javascript for C# developers Part 2"
 date: 2013-12-26 23:00:58 +0530
-comments: false
+comments: true
 sharing: false
 categories: "javascript, C#"
 keywords: "javascript for c# developer, switching from C# to javascript, javascript, Learn javascript, javascript vs c#, javascript functions, javascript inheritance, javascript prototype"
