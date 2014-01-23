@@ -4,7 +4,7 @@
   <title><![CDATA[Ajmal V Hassainar]]></title>
   <link href="http://blog.ajmalvh.com/atom.xml" rel="self"/>
   <link href="http://blog.ajmalvh.com/"/>
-  <updated>2014-01-23T23:11:18+05:30</updated>
+  <updated>2014-01-23T23:13:20+05:30</updated>
   <id>http://blog.ajmalvh.com/</id>
   <author>
     <name><![CDATA[Ajmal Vh]]></name>
@@ -80,7 +80,7 @@
 
 <p><img src="https://lh5.googleusercontent.com/-HNWIrzMTRt8/UuE9AFPrFvI/AAAAAAAAAz8/TLzjmjPDCDQ/s618/Capture.PNG" title="Mongodb folder" alt="Mongodb folder_ajmalvh.com"></p>
 
-<h6>Run Mongodb</h6>
+<h5>Run Mongodb</h5>
 
 <p>For starting and stopping the mongodb server, we need only the mongod.exe inside the bin folder. To run mongod just run this command in the command line</p>
 
