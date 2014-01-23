@@ -4,7 +4,7 @@
   <title><![CDATA[Ajmal V Hassainar]]></title>
   <link href="http://blog.ajmalvh.com/atom.xml" rel="self"/>
   <link href="http://blog.ajmalvh.com/"/>
-  <updated>2014-01-14T10:30:32+05:30</updated>
+  <updated>2014-01-23T22:33:38+05:30</updated>
   <id>http://blog.ajmalvh.com/</id>
   <author>
     <name><![CDATA[Ajmal Vh]]></name>
@@ -12,6 +12,96 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Installing Mongodb in Windows]]></title>
+    <link href="http://blog.ajmalvh.com/blog/2014/01/07/installing-mongodb-in-windows-8/"/>
+    <updated>2014-01-07T13:29:18+05:30</updated>
+    <id>http://blog.ajmalvh.com/blog/2014/01/07/installing-mongodb-in-windows-8</id>
+    <content type="html"><![CDATA[<p>There are two ways to install Mongodb in windows.</p>
+
+<ul>
+<li>Installing with Chocolatey package manager</li>
+<li>Manual Installation</li>
+</ul>
+
+
+<h4>Installing with chocolatey package manager</h4>
+
+<p>This is the easiest way to install Mongodb. First you need to install Chocolatey package manager. Chocolatey is a quick Linux style package manager for windows. Installing Chocolatey is very easy. Just copy paste below line to your command line and run it as Administrator</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you are ready to go, To install MongoDB, run the following command from the command line or from PowerShell:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> cinst mongodb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Chocolatey will download and install the latest version of Mongodb in your system. Also it will add Mongdb as a windows service.   <!--more--></p>
+
+<h4>Manual Installation</h4>
+
+<p>The MongoDB does not have an installer. For Windows platform, MongoDB distributes a zip archive. Download the latest production relese from the following page: <a href="http://www.mongodb.org/downloads.">http://www.mongodb.org/downloads.</a> There are 32-bit and 64-bit versions, download the correct version as per your system architecture. If you don&rsquo;t know your system architecture run the following command from your command line:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>wmic os get osarchitecture</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After download extract the zip archive to your C:\ drive rename the folder and rename the folder to mongodb. MongoDB requires a data folder to store its files and a text file to log its output. Create two folders data and log inside the mongodb folder. For ease of installation crate a config file named mongo.config(just a text file) like below and and put it in the mongodb folder.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>##store data here
+</span><span class='line'>dbpath=C:\mongodb\data
+</span><span class='line'> 
+</span><span class='line'>##log file. Mongodb will create it automatically
+</span><span class='line'>logpath=C:\mongodb\log\mongo.log
+</span><span class='line'>
+</span><span class='line'>#port
+</span><span class='line'>port = 27017
+</span><span class='line'>
+</span><span class='line'>##log read and write operations
+</span><span class='line'>diaglog=3</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now your mongodb folder will look like this
+<img src="https://lh5.googleusercontent.com/-HNWIrzMTRt8/UuE9AFPrFvI/AAAAAAAAAz8/TLzjmjPDCDQ/s618/Capture.PNG" width="150" height="250" title="Mongodb folder" alt="Mongodb folder_ajmalvh.com"></p>
+
+<h6>Run Mongodb</h6>
+
+<p>For starting and stopping the mongodb server, we need only the mongod.exe inside the bin folder. To run mongod just run this command in the command line</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\mongodb\bin\mongod.exe --config C:\mongodb\mongo.config</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Now you can use mongo.exe to connect to the started Mongodb server.</p>
+
+<h4>MongoDB as Windows Service</h4>
+
+<p>To install Mongodb as a service. Execute the following commands:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>C:\mongodb\bin\mongod.exe --config C:\mongodb\mongo.config  --install
+</span><span class='line'>net start MongoDB</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will install mongodb as a windows service.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Javascript for C# developers Part 2]]></title>
